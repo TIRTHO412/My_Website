@@ -1,0 +1,486 @@
+/* ===================================================================
+   CHANDRA PAINTS - FULL RESPONSIVE MEDIA QUERIES
+   Breakpoints Supported: 320px, 375px, 425px, 768px, 992px, 1024px, 1200px, 1338px, 1440px, 1920px
+   =================================================================== */
+
+/* -------------------------------------------------------------------
+   1. ULTRA WIDE SCREENS (1920px & Above)
+   ------------------------------------------------------------------- */
+@media (min-width: 1920px) {
+    :root {
+        --container-padding: 8rem;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    .hero-content {
+        max-width: 1300px;
+    }
+
+    .shade-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .why-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        --container-padding: 12rem;
+    }
+
+    .hero-title {
+        font-size: 5.5rem;
+    }
+}
+
+/* -------------------------------------------------------------------
+   2. DESKTOP NAVIGATION (1339px & Above)
+   ------------------------------------------------------------------- */
+@media (min-width: 1339px) {
+    .mobile-toggle {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .nav-overlay {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        position: static !important;
+        transform: none !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        border: none !important;
+        flex-direction: row !important;
+        padding: 0 !important;
+        gap: 2rem !important;
+        box-shadow: none !important;
+    }
+
+    .nav-links .nav-link {
+        font-size: var(--font-sm);
+        font-weight: 500;
+        color: var(--text-secondary);
+        background: transparent;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        transform: none;
+    }
+
+    .nav-links .nav-link:hover,
+    .nav-links .nav-link.active {
+        background: transparent;
+        color: var(--accent-cyan);
+        transform: none;
+        box-shadow: none;
+    }
+
+    .nav-btn {
+        display: inline-flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+}
+
+/* -------------------------------------------------------------------
+   3. MOBILE & TABLET NAVIGATION BREAKPOINT (1338px & Below)
+   ------------------------------------------------------------------- */
+@media (max-width: 1338px) {
+    .nav-container {
+        padding: 0 1.25rem;
+    }
+
+    /* HIDE ALL DESKTOP BUTTONS / LINKS FROM TOP BAR BELOW 1339px */
+    .nav-btn {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* SHOW ONLY HAMBURGER ICON BUTTON */
+    .mobile-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        color: #f8fafc;
+        font-size: 1.35rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10001;
+        outline: none;
+    }
+
+    .mobile-toggle:hover,
+    .mobile-toggle.open {
+        background: #0284c7;
+        border-color: #38bdf8;
+        color: #ffffff;
+    }
+
+    /* SOLID MOBILE DRAWER MENU (ZERO BLUR, SOLID #0B1220 BACKGROUND) */
+    .nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 320px !important;
+        max-width: 85vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        background: #0B1220 !important;
+        opacity: 1 !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        padding: 5.5rem 1.75rem 2.5rem 1.75rem !important;
+        gap: 0.75rem !important;
+        transform: translateX(105%) !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        z-index: 10000 !important;
+        box-shadow: -15px 0 40px rgba(0, 0, 0, 0.8) !important;
+        overflow-y: auto !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+    .nav-links.active {
+        transform: translateX(0) !important;
+    }
+
+    .nav-links .nav-link {
+        font-family: var(--font-heading, 'Outfit', sans-serif);
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding: 0.9rem 1.25rem;
+        border-radius: 12px;
+        color: #cbd5e1;
+        background: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.25s ease;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        box-sizing: border-box;
+    }
+
+    .nav-links .nav-link i {
+        font-size: 1.15rem;
+        width: 24px;
+        text-align: center;
+        color: #06b6d4;
+    }
+
+    .nav-links .nav-link:hover,
+    .nav-links .nav-link.active {
+        background: #0284c7;
+        border-color: #38bdf8;
+        color: #ffffff;
+        transform: translateX(6px);
+    }
+
+    .nav-links .nav-link:hover i,
+    .nav-links .nav-link.active i {
+        color: #ffffff;
+    }
+
+    /* SOLID OVERLAY (NO BLUR) */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+/* -------------------------------------------------------------------
+   4. DESKTOP & LARGE LAPTOPS (1440px & 1200px)
+   ------------------------------------------------------------------- */
+@media (max-width: 1440px) {
+    .shade-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .why-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .shade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* -------------------------------------------------------------------
+   5. LAPTOPS & SMALL DESKTOPS (1024px)
+   ------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* -------------------------------------------------------------------
+   6. TABLETS & SCREENS BELOW 992px / 990px
+   ------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .why-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-top-grid {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        gap: 2.5rem;
+    }
+
+    .contact-info-col {
+        width: 100% !important;
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100% !important;
+    }
+
+    .map-fullwidth-wrapper {
+        width: 100% !important;
+        margin-top: 2rem !important;
+    }
+
+    .map-container-card {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    .map-iframe-wrap {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .map-iframe-wrap iframe {
+        width: 100% !important;
+        min-width: 100% !important;
+        height: 420px !important;
+    }
+
+    .contact-form-card {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* -------------------------------------------------------------------
+   7. MOBILE DEVICES (768px)
+   ------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1.25rem;
+    }
+
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .hero {
+        padding: 6.5rem 1.25rem 3.5rem 1.25rem;
+    }
+
+    .why-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-glass-card.full-span {
+        grid-column: span 1;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-whatsapp {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 52px;
+        height: 52px;
+        font-size: 1.75rem;
+    }
+
+    .map-iframe-wrap iframe {
+        height: 380px !important;
+    }
+}
+
+/* -------------------------------------------------------------------
+   8. SMALL MOBILE PHONES (425px, 375px, 320px)
+   ------------------------------------------------------------------- */
+@media (max-width: 425px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-hero {
+        width: 100%;
+    }
+
+    .contact-actions-wrap {
+        flex-direction: column;
+    }
+
+    .contact-actions-wrap .btn {
+        width: 100%;
+    }
+
+    .map-iframe-wrap iframe {
+        height: 320px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    :root {
+        --container-padding: 1rem;
+    }
+
+    .product-card {
+        padding: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        --container-padding: 0.75rem;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}

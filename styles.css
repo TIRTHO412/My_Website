@@ -1,0 +1,124 @@
+/* ===================================================================
+   CHANDRA PAINTS - MAIN STYLESHEET (ROOT COMPATIBILITY)
+   =================================================================== */
+
+@import url('css/variables.css');
+@import url('css/style.css');
+@import url('css/animation.css');
+@import url('css/calculator.css');
+@import url('css/faq.css');
+@import url('css/responsive.css');
+
+/* ===================================================================
+   APPENDED CODE: WHY CHOOSE US GLASSMORPHISM STYLES & REVEAL
+   =================================================================== */
+.why-us-append-section {
+    background: var(--secondary-bg, #0f172a);
+    padding: clamp(3rem, 5vw, 6rem) 0;
+    width: 100%;
+    position: relative;
+}
+
+.why-us-append-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.why-us-glass-card {
+    background: rgba(30, 41, 59, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 2.25rem 1.75rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: left;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-us-glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #06b6d4, #ff6b00);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.why-us-glass-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(6, 182, 212, 0.45);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
+    background: rgba(30, 41, 59, 0.95);
+}
+
+.why-us-glass-card:hover::before {
+    opacity: 1;
+}
+
+.why-us-icon-circle {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(37, 99, 235, 0.2));
+    border: 1px solid rgba(6, 182, 212, 0.35);
+    color: #06b6d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+    transition: transform 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-us-glass-card:hover .why-us-icon-circle {
+    transform: scale(1.1) rotate(10deg);
+    color: #ff6b00;
+    box-shadow: 0 0 25px rgba(255, 107, 0, 0.4);
+}
+
+.why-us-card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.why-us-card-title span.check-mark {
+    color: #06b6d4;
+    font-size: 1.1rem;
+}
+
+.why-us-card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+
+.why-us-reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(8px);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-us-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
