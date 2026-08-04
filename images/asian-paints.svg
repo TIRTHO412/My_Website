@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" width="260" height="80">
+  <defs>
+    <linearGradient id="asianUltra" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="glowAsian" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#fbbf24" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <g transform="translate(10, 15)" filter="url(#glowAsian)">
+    <path d="M8 42 L24 8 L40 42 Z M16 28 L32 28" stroke="url(#asianUltra)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="50" y="27" font-family="'Outfit', sans-serif" font-size="23" font-weight="900" fill="#ffffff">asian<tspan fill="#fbbf24">paints</tspan></text>
+    <text x="50" y="47" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="2.5">COLOUR WITH ASIAN</text>
+  </g>
+</svg>

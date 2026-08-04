@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" width="260" height="80">
+  <defs>
+    <linearGradient id="bergerUltra" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+    <filter id="glowBerger" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#f43f5e" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <g transform="translate(10, 15)" filter="url(#glowBerger)">
+    <circle cx="24" cy="24" r="22" fill="url(#bergerUltra)"/>
+    <path d="M16 14 C24 4, 32 14, 24 34 C16 14, 16 14, 16 14 Z" fill="#ffffff"/>
+    <text x="58" y="27" font-family="'Outfit', sans-serif" font-size="25" font-weight="900" fill="#f43f5e" letter-spacing="1">Berger</text>
+    <text x="58" y="47" font-family="'Inter', sans-serif" font-size="13" font-weight="800" fill="#f8fafc" letter-spacing="4">PAINTS</text>
+  </g>
+</svg>
