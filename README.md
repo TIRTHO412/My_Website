@@ -15,7 +15,7 @@ A high-performance, fully responsive, modern web application for **Chandra Paint
   - **Direct External Deep-linking**: Clicking any card or "Visit Official Website" button opens the official website in a new tab (`target="_blank" rel="noopener noreferrer"`).
 - **100% Full-Width Google Maps & Contact Section**:
   - Embedded exact store location iframe for **Chandra Paints** in Amta Sahapara.
-  - Quick action buttons: **Call Now** (`tel:9932151277`), **Email Us** (`mailto:chandrapaints@gmail.com`), **WhatsApp**, and **Get Directions** (`https://maps.google.com/?q=Chandra+Paints`).
+  - Quick action buttons: **Call Now** (`tel:9932151277`), **Email Us** (`mailto:paintschandra@gmail.com`), **WhatsApp**, and **Get Directions** (`https://maps.google.com/?q=Chandra+Paints`).
 - **Computerized Shade Cards Gallery**: Interactive visual shade swatches for **Berger**, **Asian Paints**, **Dulux**, and **Nerolac** with a fullscreen Lightbox Modal viewer.
 - **Direct-to-WhatsApp Form Integration**: Automatically constructs a formatted customer message and opens WhatsApp instantly (`https://wa.me/919932151277`).
 - **Footer with Clickable Official Brand Logos**: Direct external links to official brand portals.
